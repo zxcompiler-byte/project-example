@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
+
 const Projects = () => {
   const dataProjects = [
     {
       id: 1,
-      title: "Website E-Commerce",
-      desc: "Platform jual beli online dengan fitur keranjang dan payment gateway.",
-      tech: "React & Tailwind",
+      title: "Kopi Senja (Landing Page)",
+      desc: "Website premium untuk coffee shop dengan nuansa estetik.",
+      tech: "React & Framer Motion",
+      url: "/warkop",
     },
     {
       id: 2,
@@ -34,9 +37,11 @@ const Projects = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* 2. INI MAGIC-NYA (Looping pakai .map) */}
         {dataProjects.map((item) => (
-          <div
+          <Link
+            to={item.url || "#"}
+            target="_blank"
             key={item.id}
-            className="border border-slate-800 p-6 rounded-xl hover:bg-slate-900 transition hover:-translate-y-2 cursor-pointer group"
+            className="border border-slate-800 p-6 rounded-xl hover:bg-slate-900 transition hover:-translate-y-2 cursor-pointer group h-full"
           >
             <h3 className="text-xl font-bold mb-2 group-hover:text-orange-500 transition">
               {item.title}
@@ -49,7 +54,7 @@ const Projects = () => {
                 {item.tech}
               </span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
