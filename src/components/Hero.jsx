@@ -33,7 +33,7 @@ const Hero = () => {
         </p>
 
         <button className="mt-8 px-8 py-3 bg-blue-600 text-white rounded-full font-bold hover:bg-orange-700 transition hover:scale-105 active:scale-95 cursor-pointer">
-          Gaspol!
+          Gaspol Bro!
         </button>
       </motion.div>
     </div>
