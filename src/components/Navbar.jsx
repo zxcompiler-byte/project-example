@@ -20,7 +20,7 @@ const Navbar = () => {
             key={index}
             className="hover:text-orange-500 cursor-pointer relative group"
           >
-            {menu}
+            <a href={`#${menu.toLowerCase()}`}>{menu}</a>
             <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-orange-500 transition-all group-hover:w-full"></span>
           </li>
         ))}
